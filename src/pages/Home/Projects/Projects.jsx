@@ -6,7 +6,7 @@ const Projects = () => {
    
     const [projects, setProjects] = useState(null);
     useEffect(() => {
-        fetch('http://localhost:5000/projects')
+        fetch('https://my-portfolio-server-beta-two.vercel.app/projects')
             .then(res => res.json())
             .then(data => setProjects(data || []))  // 👈 Ensure default array instead of null
             .catch(err => console.error(err));
