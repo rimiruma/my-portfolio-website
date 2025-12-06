@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 
 const Banner = () => {
@@ -16,14 +17,22 @@ const Banner = () => {
           <p className="mb-2">
             I have a strong passion for technology, especially in web development and innovative tools that enhance user experience and continue learning.
           </p>
-          <a
-            href="https://drive.google.com/file/d/1maGcQX6Mp7pDDTgClSzx3aoBsZ10g_aB/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn bg-transparent border-2 border-sky-500 text-xl mt-1 text-white font-bold hover:bg-indigo-400"
-          >
-            Resume
-          </a>
+          <div className='flex gap-12'>
+          
+            <div className="flex  gap-4 mt-4">
+              <Link to="mailto:rimiruma12@gmail.com"><img className="rounded-xl" src="https://img.icons8.com/?size=24&id=tnnUFgHrPmR0&format=gif" alt="Email icon!" /></Link>
+              <Link to="https://www.linkedin.com/in/rimi-ruma/"><img className="rounded-md" src="https://img.icons8.com/?size=24&id=TpMqKvVFD9pP&format=gif" alt="LinkedIn icon!" /></Link>
+              <Link to="https://github.com/rimiruma"><img className="rounded-full" src="https://img.icons8.com/?size=24&id=akG4VRhAoSii&format=gif" alt="Github icon!" /></Link>
+            </div>
+              <a
+              href="https://drive.google.com/file/d/1IHEEzz5H0fnGi5JBvXyPYMUdYOzngrtT/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn bg-transparent border-2 border-sky-500 text-xl mt-1 text-white font-bold hover:bg-indigo-400"
+            >
+              Resume
+            </a>
+          </div>
         </div>
       </div>
     </div>

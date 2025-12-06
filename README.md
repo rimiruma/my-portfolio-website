@@ -1,10 +1,10 @@
-# TahminaTanjida -  Portfolio Website.
+# Rimi Ruma -  Portfolio Website.
 
 A dedicated developer skilled in React, Tailwind CSS, MongoDB, and dynamic animations, crafting efficient and visually appealing web apps!
 
 
 # Live Link
-<!-- # [https://my-portfolio-website-51c67.firebaseapp.com/](https://my-portfolio-website-51c67.firebaseapp.com/) -->
+# [https://my-portfolio-client-omega.vercel.app/](https://my-portfolio-client-omega.vercel.app/)
 
 ## key features 
 

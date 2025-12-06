@@ -52,12 +52,12 @@ const Footer = () => {
         <div className="bg-gradient-to-br from-sky-300 via-blue-400 to-indigo-900 to-90% py-5">
             <footer className="grid grid-cols-1 md:grid-cols-2 px-4 md:px-16">
                 <nav>
-                    <p className="text-4xl italic text-sky-600 font-bold">Salma Akther Mim</p>
-                  
+                    <p className="text-4xl italic text-sky-600 font-bold">Rimi Ruma</p>
+
                     <div className="flex gap-4 mt-4">
-                        <Link to="mailto:salmaakthermim112@gmail.com"><img className="rounded-xl" src="https://img.icons8.com/?size=24&id=tnnUFgHrPmR0&format=gif" alt="Email icon!" /></Link>
-                        {/* <Link to="https://www.linkedin.com/in/tahminatanjida/"><img className="rounded-md" src="https://img.icons8.com/?size=24&id=TpMqKvVFD9pP&format=gif" alt="LinkedIn icon!" /></Link> */}
-                        <Link to="https://github.com/salmaakthermim"><img className="rounded-full" src="https://img.icons8.com/?size=24&id=akG4VRhAoSii&format=gif" alt="Github icon!" /></Link>
+                        <Link to="mailto:rimiruma12@gmail.com"><img className="rounded-xl" src="https://img.icons8.com/?size=24&id=tnnUFgHrPmR0&format=gif" alt="Email icon!" /></Link>
+                        <Link to="https://www.linkedin.com/in/rimi-ruma/"><img className="rounded-md" src="https://img.icons8.com/?size=24&id=TpMqKvVFD9pP&format=gif" alt="LinkedIn icon!" /></Link>
+                        <Link to="https://github.com/rimiruma"><img className="rounded-full" src="https://img.icons8.com/?size=24&id=akG4VRhAoSii&format=gif" alt="Github icon!" /></Link>
                     </div>
                 </nav>
                 <nav>
@@ -84,14 +84,14 @@ const Footer = () => {
                         ></textarea>
                         <button type="submit" className="w-18 h-16 inline-flex text-white rounded-xl items-center gap-2">
                             Submit <span className="mt-1 w-5 h-5 bg-teal-600 inline-flex rounded-full text-white justify-center items-center">
-                            <IoIosArrowDroprightCircle />
-                        </span>
+                                <IoIosArrowDroprightCircle />
+                            </span>
                         </button>
                     </form>
                 </nav>
             </footer>
             <div className="text-center pt-4">
-                <p className="text-sm text-gray-600">© {new Date().getFullYear()} Tahmina Tanjida - All rights reserved.</p>
+                <p className="text-sm text-black">© {new Date().getFullYear()} Rimi Ruma - All rights reserved.</p>
             </div>
         </div>
     );
