@@ -6,6 +6,7 @@ import Skills from '../Skills/Skills';
 import AboutMe from '../AboutMe/AboutMe';
 import { Snowfall } from 'react-snowfall';
 import Me from '../AboutMe/Me';
+import Contact from '../Contact/Contact';
 
 const Home = () => {
     
@@ -21,6 +22,7 @@ const Home = () => {
             <Skills></Skills>
             <Projects></Projects>
             <AboutMe></AboutMe>
+            <Contact></Contact>
         </div>
     );
 };

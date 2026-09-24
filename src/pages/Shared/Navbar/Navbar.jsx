@@ -5,15 +5,15 @@ const Navbar = ({ handleThemeToggle, isDark }) => {
     const links = <>
       
             <div className="flex gap-5 text-bold ml-16">
-                      
-                        <a href="#/" className="link link-hover">Home</a>
+                        <a href="/" className="link link-hover">Home</a>
                         <a href="#projects" className="link link-hover">Projects</a>
-                        <a href="#Me" className="link link-hover">About Me</a>
+                        <a href="#about-me" className="link link-hover">About Me</a>
+                        <a href="#contact" className="link link-hover">Contact</a>
                     </div>
     </>
     return (
         <div className='sticky top-0 z-50 backdrop-blur-sm bg-gradient-to-tl from-sky-300 via-blue-400 to-indigo-900 to-90% bg-opacity-20 py-4'>
-            <div className="navbar bg-sky-300 rounded-lg w-11/12 mx-auto text-black">
+            <div className="navbar bg-sky-300 rounded-lg w-full mx-auto text-black">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
