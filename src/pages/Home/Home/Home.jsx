@@ -7,7 +7,7 @@ import Education from '../Educations/Education';
 import Skills from '../Skills/Skills';
 import AboutMe from '../AboutMe/AboutMe';
 import Me from '../AboutMe/Me';
-import Contact from '../Contact/Contact';
+// import Contact from '../Contact/Contact';
 
 import { Snowfall } from 'react-snowfall';
 import ScrollReveal from '../../../ScrollReveal/ScrollReveal';
@@ -55,7 +55,7 @@ const Home = () => {
 
             {/* Contact */}
             <ScrollReveal>
-                <Contact />
+                {/* <Contact /> */}
             </ScrollReveal>
 
         </div>
