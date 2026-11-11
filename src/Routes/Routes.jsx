@@ -6,8 +6,6 @@ import Home from "../pages/Home/Home/Home";
 import DetailsProject from "../pages/Details/DetailsProject";
 import ErrorPage from "../pages/Error/ErrorPage";
 
-
-  
 export const router = createBrowserRouter([
     {
         path: "/",

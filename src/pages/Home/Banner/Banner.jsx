@@ -1,115 +1,285 @@
-import React from 'react';
-import { Link } from "react-router-dom";
-import { motion } from 'framer-motion';
-import { Typewriter } from 'react-simple-typewriter';
 
-const taglineLetters = "BUILD. SHIP. SCALE.".split("");
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 const Banner = () => {
   return (
-    <div
-      className="hero min-h-screen relative overflow-hidden"
+    <section
+      id="home"
+      className="relative min-h-screen overflow-hidden bg-[#050d1b] text-white flex items-center"
       style={{
-        backgroundImage: "url(https://i.ibb.co.com/qLw9RPSX/DALL-E-2025-03-13-03-47-45-A-digital-abstract-network-visualization-with-interconnected-nodes-and-li.webp)",
-      }}>
-      <div className="hero-overlay"></div>
+        backgroundImage:
+          "url(https://i.ibb.co.com/qLw9RPSX/DALL-E-2025-03-13-03-47-45-A-digital-abstract-network-visualization-with-interconnected-nodes-and-li.webp)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-[#050d1b]/85"></div>
 
-      <div className="hero-content text-neutral-content text-center flex flex-col items-center gap-6 z-10">
+      {/* Background Glow */}
+      <div className="absolute top-20 left-20 w-72 h-72 bg-blue-600/10 blur-[120px] rounded-full"></div>
+      <div className="absolute bottom-10 right-20 w-72 h-72 bg-purple-600/10 blur-[120px] rounded-full"></div>
 
-        {/* Profile Image */}
-        <motion.img
-          className='w-36 h-36 md:w-48 md:h-48 rounded-full border-4 border-sky-500 shadow-lg shadow-sky-500/40'
-          src="https://avatars.githubusercontent.com/u/139052983?v=4"
-          alt="Picture!"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        />
+      {/* Main Container */}
+      <div className="relative z-10 max-w-[1500px] mx-auto w-full px-6 md:px-10 lg:px-16 py-20">
 
-        {/* Animated BUILD. SHIP. SCALE. Tagline */}
-        <div className="flex flex-wrap justify-center gap-1 md:gap-2">
-          {taglineLetters.map((char, index) => (
-            <motion.span
-              key={index}
-              className={`text-4xl md:text-7xl font-black tracking-widest ${
-                char === '.' ? 'text-sky-400' : 'text-white'
-              }`}
-              style={{
-                textShadow: char !== ' ' && char !== '.' ? '0 0 20px rgba(135,206,235,0.6)' : 'none',
-              }}
-              initial={{ opacity: 0, y: -40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.06, ease: "easeOut" }}
-            >
-              {char === ' ' ? '\u00A0' : char}
-            </motion.span>
-          ))}
-        </div>
+        {/* Two Column Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-16 xl:gap-24 items-center">
 
-        {/* Subtitle with Typewriter */}
-        <motion.h2
-          className="text-lg md:text-2xl font-semibold text-sky-300"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.4, duration: 0.6 }}
-        >
-          <Typewriter
-            words={[
-              'Full-Stack Developer',
-              'React & Node.js Engineer',
-              'Building Scalable Web Apps',
-              'Turning Ideas into Reality',
-            ]}
-            loop={Infinity}
-            cursor
-            cursorStyle="|"
-            typeSpeed={65}
-            deleteSpeed={45}
-            delaySpeed={2000}
-          />
-        </motion.h2>
-
-        {/* Short Description */}
-        <motion.p
-          className="max-w-md text-sm md:text-base opacity-80 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.8, duration: 0.6 }}
-        >
-          I have a strong passion for technology, especially in web development
-          and innovative tools that enhance user experience.
-        </motion.p>
-
-        {/* Social Icons + Resume Button */}
-        <motion.div
-          className='flex items-center gap-8 mt-2'
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.1, duration: 0.6 }}
-        >
-          <div className="flex gap-4">
-            <Link to="mailto:rimiruma12@gmail.com">
-              <img className="rounded-xl hover:scale-125 transition-transform duration-200" src="https://img.icons8.com/?size=24&id=tnnUFgHrPmR0&format=gif" alt="Email icon!" />
-            </Link>
-            <Link to="https://www.linkedin.com/in/rimi-ruma/">
-              <img className="rounded-md hover:scale-125 transition-transform duration-200" src="https://img.icons8.com/?size=24&id=TpMqKvVFD9pP&format=gif" alt="LinkedIn icon!" />
-            </Link>
-            <Link to="https://github.com/rimiruma">
-              <img className="rounded-full hover:scale-125 transition-transform duration-200" src="https://img.icons8.com/?size=24&id=akG4VRhAoSii&format=gif" alt="Github icon!" />
-            </Link>
-          </div>
-          <a
-            href="https://drive.google.com/file/d/1IHEEzz5H0fnGi5JBvXyPYMUdYOzngrtT/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn bg-transparent border-2 border-sky-500 text-white font-bold hover:bg-sky-500 hover:text-black transition-all duration-300"
+          {/* LEFT SIDE - TEXT CONTENT */}
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="w-full"
           >
-            Resume
-          </a>
-        </motion.div>
 
+            {/* Welcome Text */}
+            <p className="text-cyan-400 font-semibold tracking-widest text-base md:text-lg mb-7">
+              
+            </p>
+
+            {/* Name */}
+            <h1 className="text-5xl md:text-6xl xl:text-7xl font-black leading-tight mb-6">
+              Hi, I'm{" "}
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+                Rimi Ruma
+              </span>
+            </h1>
+
+            {/* Animated Title */}
+            <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold text-gray-200 mb-7 min-h-[45px]">
+              <Typewriter
+                words={[
+                  "Full Stack Developer",
+                  "React Developer",
+                  "Problem Solver",
+                ]}
+                loop={Infinity}
+                cursor
+                cursorStyle="|"
+                typeSpeed={70}
+                deleteSpeed={45}
+                delaySpeed={1800}
+              />
+            </h2>
+
+            {/* Description */}
+            <p className="text-gray-400 text-base md:text-lg leading-8 max-w-2xl mb-10">
+              I'm Rimi Ruma — a passionate developer who loves
+              building modern, responsive and user-friendly web
+              applications using React, Next.js, Node.js and
+              modern web technologies.
+            </p>
+
+            {/* Action Buttons */}
+            <div className="flex flex-wrap gap-5 mb-12">
+
+              {/* Resume Button */}
+              <motion.a
+                href="https://drive.google.com/file/d/1IHEEzz5H0fnGi5JBvXyPYMUdYOzngrtT/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.06, y: -3 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-7 py-4 rounded-full font-bold text-base md:text-lg
+                bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600
+                shadow-lg shadow-blue-500/30 transition-all"
+              >
+                📄 Download Resume
+              </motion.a>
+
+              {/* Projects Button */}
+              <motion.a
+                href="#projects"
+                whileHover={{ scale: 1.06, y: -3 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-7 py-4 rounded-full font-bold text-base md:text-lg
+                border-2 border-cyan-400 text-cyan-400
+                hover:bg-cyan-400 hover:text-black transition-all"
+              >
+                🚀 View Projects
+              </motion.a>
+
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-7">
+
+              <a
+                href="mailto:rimiruma12@gmail.com"
+                className="hover:scale-125 transition-transform duration-300"
+              >
+                <img
+                  src="https://img.icons8.com/?size=32&id=tnnUFgHrPmR0&format=png"
+                  alt="Email"
+                />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/rimi-ruma/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-125 transition-transform duration-300"
+              >
+                <img
+                  src="https://img.icons8.com/?size=32&id=TpMqKvVFD9pP&format=png"
+                  alt="LinkedIn"
+                />
+              </a>
+
+              <a
+                href="https://github.com/rimiruma"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-125 transition-transform duration-300"
+              >
+                <img
+                  src="https://img.icons8.com/?size=32&id=akG4VRhAoSii&format=png"
+                  alt="GitHub"
+                />
+              </a>
+
+            </div>
+          </motion.div>
+
+          {/* RIGHT SIDE - PROFILE IMAGE */}
+          <motion.div
+            className="relative w-full flex justify-center items-center mt-10 lg:mt-0"
+            initial={{ opacity: 0, x: 60, scale: 0.9 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ duration: 0.9 }}
+          >
+
+            {/* ANIMATED GRADIENT GLOW */}
+            <motion.div
+              className="absolute w-[350px] h-[350px] md:w-[520px] md:h-[520px]
+              rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600
+              blur-[80px]"
+              animate={{
+                scale: [1, 1.2, 1],
+                rotate: [0, 180, 360],
+                opacity: [0.3, 0.6, 0.3],
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+            />
+
+            {/* FIRST ROTATING CIRCLE */}
+            <motion.div
+              className="absolute w-[320px] h-[320px] md:w-[480px] md:h-[480px]
+              rounded-full border-[3px] border-dashed border-cyan-400/50"
+              animate={{ rotate: 360 }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+            />
+
+            {/* SECOND ROTATING CIRCLE */}
+            <motion.div
+              className="absolute w-[290px] h-[290px] md:w-[440px] md:h-[440px]
+              rounded-full border-2 border-purple-500/40"
+              animate={{
+                rotate: -360,
+                scale: [1, 1.05, 1],
+              }}
+              transition={{
+                rotate: {
+                  duration: 15,
+                  repeat: Infinity,
+                  ease: "linear",
+                },
+                scale: {
+                  duration: 4,
+                  repeat: Infinity,
+                },
+              }}
+            />
+
+            {/* FLOATING PARTICLES */}
+            {[...Array(8)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute w-2 h-2 rounded-full bg-cyan-300
+                shadow-lg shadow-cyan-400"
+                style={{
+                  left: `${15 + i * 10}%`,
+                  top: `${15 + (i % 4) * 20}%`,
+                }}
+                animate={{
+                  y: [0, -25, 0],
+                  opacity: [0.3, 1, 0.3],
+                  scale: [0.7, 1.4, 0.7],
+                }}
+                transition={{
+                  duration: 2 + (i % 3),
+                  repeat: Infinity,
+                  delay: i * 0.3,
+                }}
+              />
+            ))}
+
+            {/* PROFILE IMAGE */}
+            <motion.div
+              animate={{ y: [0, -12, 0] }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="relative z-10 w-[280px] h-[360px]
+              sm:w-[340px] sm:h-[440px]
+              xl:w-[420px] xl:h-[550px]
+              rounded-[30px] p-1
+              bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600
+              shadow-2xl shadow-blue-500/40"
+            >
+
+              {/* Image */}
+              <div className="w-full h-full rounded-[27px] overflow-hidden bg-[#101a2b]">
+                <img
+                  src="https://avatars.githubusercontent.com/u/139052983?v=4"
+                  alt="Rimi Ruma"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+            </motion.div>
+
+            {/* AVAILABLE BADGE */}
+            <div className="absolute top-0 left-0 sm:left-5
+            bg-[#101a2b] border border-blue-500/50
+            px-5 py-3 rounded-full shadow-xl z-20">
+
+              <span className="flex items-center gap-2 text-sm md:text-base">
+                <span className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></span>
+                Available for work
+              </span>
+
+            </div>
+
+            {/* DEVELOPER BADGE */}
+            <div className="absolute bottom-0 z-20
+            bg-gradient-to-r from-cyan-500 to-purple-600
+            px-6 py-3 rounded-full font-bold shadow-xl text-sm md:text-base">
+
+              💻 Full Stack Developer
+
+            </div>
+
+          </motion.div>
+
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
